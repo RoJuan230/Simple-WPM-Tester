@@ -2,8 +2,8 @@ import time
 import os
 
 def start_test():
-    for i in range(3):    # countdown
-        print(f'{i+1}...')
+    for num in [3, 2, 1]:    # countdown
+        print(f'{num}...')
         time.sleep(1)
         os.system('cls')
 
@@ -14,7 +14,7 @@ def start_test():
     time.sleep(2)
 
     words = words.split(' ')
-    print(f'WPM: {len(words)/elapsed}')
+    print(f'WPM: {len(words)/elapsed:.0f}')
 
     play_again = input('Would you like to play again?')
 
