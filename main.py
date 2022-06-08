@@ -3,6 +3,7 @@ import os
 
 def start_test():
     for num in [3, 2, 1]:    # countdown
+        os.system('cls')
         print(f'{num}...')
         time.sleep(1)
         os.system('cls')
@@ -16,9 +17,9 @@ def start_test():
     words = words.split(' ')
     print(f'WPM: {len(words)/elapsed:.0f}')
 
-    play_again = input('Would you like to play again?')
+    play_again = input('Would you like to play again? ')    
 
-    if lower(strip(play_again)) == 'yes' or lower(string(play_again)) == 'y':
+    if (play_again.strip()).lower() == 'yes' or (play_again.strip()).lower() == 'y':
         start_test()
     else:
         return
