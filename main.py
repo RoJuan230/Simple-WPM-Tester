@@ -4,8 +4,8 @@ import msvcrt
 
 def start_test():
     print('> ')
-    first_letter = msvcrt.getch()
-    os.system('cls')
+    first_letter = msvcrt.getch()    # Pauses rest of function until character is typed.
+    os.system('cls')    # clear console
     start_time = time.time()    # Once the first letter is recorded, start.
 
     words = input(f'> {str(first_letter)[2:3]}')
@@ -24,16 +24,15 @@ def start_test():
         return
     
 
-def welcome():
+def welcome():    # Introducing tester.
     os.system('cls')
     print('Welcome to the WPM tester!!')
     time.sleep(2.5)
     os.system('cls')
-    print('Type a phrase or two then hit enter to check your WPM! Start when you are ready...')
-    time.sleep(3.5)
+    print('Type a phrase or two then hit enter to check your WPM...')
+    time.sleep(2)
+    os.system('cls')
 
     start_test()
 
 welcome()
-
-# TODO: make it so that the timer starts on a keypress.
