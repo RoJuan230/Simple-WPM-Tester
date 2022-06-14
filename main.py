@@ -4,7 +4,7 @@ import msvcrt
 
 def start_test():
     print('> ')
-    first_letter = msvcrt.getch()    # Pauses rest of function until character is typed.
+    first_letter = msvcrt.getch()    # Wait until character is typed.
     os.system('cls')    # clear console
     start_time = time.time()    # Once the first letter is recorded, start.
 
@@ -24,7 +24,7 @@ def start_test():
         return
     
 
-def welcome():    # Introducing tester.
+def welcome():
     os.system('cls')
     print('Welcome to the WPM tester!!')
     time.sleep(2.5)
